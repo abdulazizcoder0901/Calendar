@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #111222;
+}
+
+.wrapper{
+    width: 450px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.wrapper header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px 10px;
+}
+
+header .current-date{
+    font-size: 1.40rem;
+    font-weight: 500;
+}
+
+header .icons span{
+    width: 38px;
+    height: 38px;
+    background: #e9e7e7;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0 1px;
+    border-radius: 50%;
+    color: #878787;
+}
+
+header .icons span:hover{
+    background: #d6d5d5;
+}
+
+header .icons span:last-child{
+    margin-right: -10px;
+}
+
+.calendar{
+    padding: 20px;
+}
+
+.calendar ul{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.calendar .days{
+    margin-bottom: 20px;
+}
+
+.calendar .weeks li{
+    font-weight: 500;
+}
+
+.calendar ul li{
+    position: relative;
+    width: calc(100% / 7);
+}
+
+.calendar .days li{
+    z-index: 1;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.days li.inactive{
+    color: #aaa;
+}
+
+.calendar .days li::before{
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.days li.active::before{
+    background: #9B59B6;
+}
+
+.days li:hover:before{
+    background-color: #d6d2d2;
+}
